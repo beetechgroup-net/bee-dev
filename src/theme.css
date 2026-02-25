@@ -1,0 +1,66 @@
+@layer base {
+  /* Bee Dev Light Theme */
+  :root,
+  [data-theme="light"] {
+    color-scheme: light;
+
+    /* Primitive Colors */
+    --white: oklch(100% 0 0);
+    --black: oklch(0% 0 0);
+    --background: oklch(0.98 0.01 240);
+    --foreground: oklch(0.15 0.02 240);
+
+    /* Bee Dev Primary (Amber/Gold gradient feel) */
+    --primary: oklch(0.75 0.18 55);
+    --primary-foreground: var(--white);
+
+    /* Bee Dev Secondary (Soft Gray/Blue) */
+    --secondary: oklch(0.95 0.01 240);
+    --secondary-foreground: oklch(0.2 0.02 240);
+
+    /* Status */
+    --success: oklch(0.65 0.15 150);
+    --success-foreground: var(--white);
+    --warning: oklch(0.75 0.15 75);
+    --warning-foreground: var(--black);
+    --danger: oklch(0.6 0.18 25);
+    --danger-foreground: var(--white);
+  }
+
+  /* Bee Dev Dark Theme (Default/Preferred) */
+  .dark,
+  [data-theme="dark"] {
+    color-scheme: dark;
+
+    /* Deep Space Background */
+    --background: oklch(0.12 0.015 260);
+    --foreground: oklch(0.95 0.01 260);
+
+    /* Bee Dev Primary (Vibrant Amber/Yellow) */
+    --primary: oklch(0.8 0.16 70);
+    --primary-foreground: oklch(0.1 0.02 260);
+
+    /* Bee Dev Secondary (Elevated Dark Gray) */
+    --secondary: oklch(0.18 0.015 260);
+    --secondary-foreground: oklch(0.95 0.01 260);
+
+    /* Status */
+    --success: oklch(0.7 0.15 150);
+    --success-foreground: var(--black);
+    --warning: oklch(0.8 0.16 70);
+    --warning-foreground: var(--black);
+    --danger: oklch(0.65 0.23 25);
+    --danger-foreground: var(--white);
+  }
+}
+
+@theme inline {
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+
+  /* Modern typography stack */
+  --font-sans: "Inter", "Outfit", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", "Fira Code", monospace;
+}
