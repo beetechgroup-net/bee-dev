@@ -220,14 +220,22 @@ function Header() {
 }
 
 function App() {
+  const location = useLocation();
+  const searchParams = new URLSearchParams(location.search);
+  const isContentSection =
+    searchParams.get("section") === "content" ||
+    location.hash === "#content" ||
+    location.pathname === "/content";
+
   return (
     <div className="h-screen w-full bg-background bg-premium-gradient text-foreground overflow-hidden font-sans selection:bg-primary/30 flex flex-col perspective-1000">
-      <Header />
+      {!isContentSection && <Header />}
       <main className="flex-1 overflow-y-auto">
         <div className="p-6 max-w-7xl w-full mx-auto pb-12">
           <div className="animate-in fade-in zoom-in-95 duration-300 ease-out min-h-full">
             <Routes>
               <Route path="/" element={<Home />} />
+              <Route path="/content" element={<Home />} />
               <Route path="/json" element={<JsonBeautifier />} />
               <Route path="/xml" element={<XmlBeautifier />} />
               <Route path="/git" element={<GitCommands />} />

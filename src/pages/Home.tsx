@@ -46,8 +46,8 @@ const tools = [
     path: "/base64",
     icon: CornerRightDown,
     description: "Encode and decode Base64 strings.",
-    color: "text-secondary",
-    bg: "bg-secondary/20",
+    color: "text-success",
+    bg: "bg-success/10",
   },
   {
     name: "UUID Generator",
@@ -86,8 +86,8 @@ const tools = [
     path: "/lorem",
     icon: AlignLeft,
     description: "Generate mock placeholder texts for UI.",
-    color: "text-secondary",
-    bg: "bg-secondary/20",
+    color: "text-success",
+    bg: "bg-success/10",
   },
   {
     name: "Color Converter",
@@ -136,13 +136,11 @@ export default function Home() {
               <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <Card.Header className="flex gap-4 px-6 pt-6 pb-2">
                 <div
-                  className={`p-3 rounded-xl ${tool.bg} ${tool.color} group-hover:scale-110 transition-transform duration-300`}
+                  className={`flex gap-2 p-3 rounded-xl ${tool.bg} ${tool.color} group-hover:scale-110 transition-transform duration-300`}
                 >
                   <tool.icon size={24} />
-                </div>
-                <Card.Title className="font-bold text-lg text-foreground/90 self-center">
                   {tool.name}
-                </Card.Title>
+                </div>
               </Card.Header>
               <Card.Content className="px-6 pb-6 pt-2">
                 <p className="text-foreground/60 text-sm leading-relaxed">
