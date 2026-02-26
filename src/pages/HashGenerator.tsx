@@ -102,10 +102,6 @@ export default function HashGenerator() {
                     readOnly
                     value={hash}
                     className="font-mono text-sm"
-                    classNames={{
-                      inputWrapper:
-                        "bg-foreground/5 border-foreground/5 data-[hover=true]:border-foreground/10 group-data-[focus=true]:border-success data-[hover=true]:bg-foreground/10",
-                    }}
                     placeholder={`Waiting for input...`}
                   />
                   <Button

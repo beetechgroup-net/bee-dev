@@ -47,7 +47,7 @@ export default function UrlEncoder() {
               <div className="flex gap-1 bg-foreground/5 p-1 rounded-xl">
                 <Button
                   size="sm"
-                  variant={urlMode === "encode" ? "warning" : "ghost"}
+                  variant={urlMode === "encode" ? "danger" : "ghost"}
                   onPress={() => setUrlMode("encode")}
                   className={
                     urlMode === "encode"
@@ -59,7 +59,7 @@ export default function UrlEncoder() {
                 </Button>
                 <Button
                   size="sm"
-                  variant={urlMode === "decode" ? "warning" : "ghost"}
+                  variant={urlMode === "decode" ? "danger" : "ghost"}
                   onPress={() => setUrlMode("decode")}
                   className={
                     urlMode === "decode"
@@ -85,7 +85,7 @@ export default function UrlEncoder() {
             />
           </div>
           <Button
-            variant="warning"
+            variant="danger"
             onPress={handleUrl}
             className="w-full shadow-lg shadow-warning/20 font-medium bg-warning text-warning-foreground"
           >

@@ -14,7 +14,6 @@ import {
   Regex,
   ShieldCheck,
   MapPin,
-  Hexagon,
 } from "lucide-react";
 
 const tools = [
